@@ -104,12 +104,12 @@ body a:visited{
 	.member-card{
 		width:100%;
 		align-items: stretch;
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+		box-shadow: 0 5px 16px 0 rgba(0,0,0,0.4);
 		transition: 0.4s;
 		margin: 1.3em 0;
 	}
 	.member-card:hover{
-		box-shadow: 0 16px 32px 0 rgba(0,0,0,0.3);
+		box-shadow: 0 10px 32px 0 rgba(0,0,0,0.3);
 	}
 	.member-img{
 		flex-grow: 2;
@@ -139,9 +139,7 @@ body a:visited{
 		text-align: center;
 	}
 
-	.price-total{
-		text-align: right;
-	}
+	
 }
 
 
