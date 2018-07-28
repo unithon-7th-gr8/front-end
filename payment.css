@@ -87,6 +87,18 @@ body a:visited{
 	#title-img{
 		height:21px;
     }
+    .flex-row-left{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flex-row-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
     .flex-row-spacebetween{
         display: flex;
         flex-direction: row;
@@ -117,10 +129,11 @@ body a:visited{
         font-family: 'AppleSDGothicNeoB';
         margin-left: 13px;
         margin-top: 24px;
-        margin-bottom: 16px;
+        margin-bottom: 13px;
     }
     .member-card{
         height: 46px;
+        font-family:'AppleSDGothicNeoM';
     }
     .member-card img{
         margin-left: 13px;
@@ -138,8 +151,75 @@ body a:visited{
     .member-btn{
         background: #00d887;
         color: #fff;
+        font-size: 12px;
         margin-right: 13px;
-        height: 24px;
-        width: 
+        height: 22px;
+        width: 68px;
+    }
+    .member-contents{
+        margin: 6px 0;   
+    }
+    .vertical{
+        width: 100vw;
+        height: 4px;
+        background: #e6e6e6;
+        margin-top: 16px;
+    }
+    .pie-container{
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .summary-contents{
+        display: flex;
+    }
+    .summary-math{
+        width: 100%;
+        font-size: 12px;
+        margin-right: 13px;
+    }
+    .summary-img > img{
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+    .summary-name{
+        margin-bottom: 11px;
+    }
+    .tag-name{
+        height: 12px;
+		width: 42px;
+		font-size: 9px;
+		text-align: center;
+		background: #00d887;
+		color: #fff;
+		border-radius: 20px;
+        padding-top: 3px;
+        margin-right: 6px;
+    }
+    .vertical-sm{
+        width: 92px;
+        height: 1px;
+        background: #e6e6e6;
+        margin-top: 10px;
+    }
+    .endprice-contents{
+        width: 92px;
+        margin-top: 4px;
+        font-size: 12px;
+    }
+    .endprice-container{
+        margin-right: 13px;
+    }
+    .price-1st{
+        width: 92px;
+    }
+    .price-1st:first-child{
+        font-size: 12px;
+    }
+    .each-price-row{
+        margin-bottom: 5px;
+    }
+    .summary-card{
+        margin-bottom: 64px;
     }
 }
