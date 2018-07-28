@@ -61,3 +61,28 @@ body a:visited{
 }
 /* Basic initialize CSS at browser End*/
 
+
+@media screen and (max-width: 450px){
+	.member-card{
+		width:100%;
+		display : flex;
+		align-items: stretch;
+	}
+	.member-img{
+		flex-grow: 1;
+		text-align: center;
+	}
+	.member-img > svg{
+		width: auto;
+		height: 3em;
+	}
+	.member-info{
+		flex-grow: 8;
+	}
+	.member-submit-btn{
+		flex-grow:1;
+	}
+}
+
+
+
