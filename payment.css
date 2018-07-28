@@ -77,6 +77,20 @@ body a:visited{
   }
 
 @media screen and (max-width: 450px){
+    html, body{
+		height: 100%;
+	}
+	body{
+		display: flex;
+  		flex-direction: column;
+	}
+	.contents{
+		flex: 1 0 auto;
+	}
+	.sticky-container{
+		flex-shrink: 0;
+    }
+    
     #title-name{
 		height: 40px;
 		background: #343434;
@@ -222,4 +236,11 @@ body a:visited{
     .summary-card{
         margin-bottom: 64px;
     }
+    .copyright{
+		margin-bottom: 10px;
+		text-align: center;
+		font-size: 7px;
+		color: #333;
+		letter-spacing: -0.5px;
+	}
 }

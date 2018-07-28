@@ -6,16 +6,18 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
+    
     <header>
         <div id="title-name"><img id="title-img" src="/Users/soonhojang/Documents/myProject/front-end/logo.svg"></div>
     </header>
     <section class="contents">
         <div class="link-container">
-            <input type="text" value="http://www.naver.com/">
-            <div class="link-btn"><p>초대링크 복사</p></div>
+            <input type="text" value="http://www.naver.com/" id="myInput">
+            <a class="link-btn" onclick="copyLink()">초대링크 복사</a>
         </div>
         <div class="container members">
             <div class="member-card">
@@ -80,25 +82,47 @@
                     </div>
                 </div>
                 <div class="price-cont-s">
-                    <div><input type="checkbox" value="sum">합계만 입력하기</div>
+                    <div><input id="check-box" type="checkbox" checked="checked">합계만 입력하기</div>
                 </div>
             </div>
             <div class="hor"></div>
             <div class="bill-contents">
                 <div class="plus-circle flex-row-center"><img src="/Users/soonhojang/Documents/myProject/front-end/add-white.svg" class="add-img-2"></div>
                 <div class="bill-req">영수증을 첨부하세요</div>
+                <form id="form1" enctype="multipart/form-data" method="post" action="Upload.aspx">
+                    <div>
+                        <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*">
+                    </div>
+                    <div>
+                        <input type="button" onclick="uploadFile()" value="업로드" />
+                    </div>
+                    <div id="progress"></div>
+                </form>
             </div>
             <div class="vertical-line"></div>
         </div>
         <div class="complete-contents">
             <div class="check-count">모든 인원이 입력이 끝났나요?</div>
-            <div class="complete-btn"><p>결제하러 가기</p></div>
+            <a class="complete-btn show-modal open-modal">결제하러 가기</a>
         </div>
+
+
+        <div class="modal">
+            <div class="modal-contents">
+                <div class="modal-text">결제를 위한 페이지가 생성됐습니다. 주소를<br>복사해 다른 인원에게 공유하세요.</div>
+                <div class="modal-textarea">
+                    <input type="text" value="http://www.naver.com/" id="myInput">
+                    <a class="link-btn" onclick="copyLink()">복사</a>
+                </div>
+            </div>
+            <div class="modal-btn-groups flex-row-center">
+                <div class="modal-btn-group flex-column-center" id="toPage"><a class="move-page" href="http://www.naver.com">페이지로 이동</a></div>
+                <div class="modal-btn-group flex-column-center" id="closeModal"><a class="close-modal" href="#">닫기</a></div>
+            </div>
+        </div>             
     </section>
     <footer class="sticky-container">
         <div class="copyright">Copyright © gr8 Corp. All Rights Reserved.</div>
     </footer>
-
-
 </body>
 </html>

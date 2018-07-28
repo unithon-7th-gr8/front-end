@@ -73,19 +73,46 @@ body a:visited{
 	src: url('/Users/soonhojang/Documents/myProject/front-end/AppleSDGothicNeoR.woff') format('woff')
   }
 
-* {
-	font-family: AppleSDGothicNeoR;
-}
+
 @media screen and (max-width: 450px){
-	* {
-		font-size: 10px;
-	}
-	.flex-row-center{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-	}
+
+	
+    .flex-row-left{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flex-row-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .flex-row-spacebetween{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .flex-row-spacearound{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .flex-column-center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex-row-center{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 
 	html, body{
 		height: 100%;
@@ -297,6 +324,72 @@ body a:visited{
 		width:8px;
 		height: 8px;
 	}
+
+
+
+
+	.open-modal:hover {background-color: #bff2e5}
+
+	.modal {
+		background-color: #fff;
+		display: none;
+		position: fixed;
+		margin-left: 36px;
+		top: 250px;
+		width: 308px;
+		height: 143px;
+		z-index: 10;
+		box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.5);
+	}
+
+	.modal-text{
+		font-size: 14px;
+		margin-top: 19px;
+		line-height: 18px;
+	}
+	.modal-contents{
+		margin-left: 22px;
+		margin-right: 22px;
+	}
+	.modal-textarea > input{
+		width: 215px;
+		height: 25px;
+	}
+	.modal-textarea {
+		font-size: 14px;
+	}
+	.modal-textarea > a {
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		margin-left: 3px;
+		background: #00d887;
+		color: #fff;
+	}
+	.modal-btn-group{
+		width: 153px;
+		height: 45px;
+		font-size: 14px;
+	}
+	.modal-btn-groups{
+		margin-top: 11px;
+	}
+	#toPage{
+		border-top: 1px solid #E6E6E6;
+		border-right: 1px solid #E6E6E6;
+	}
+	#closeModal{
+		border-top: 1px solid #E6E6E6;
+	}
+	#toPage a{
+		color: #00d887;
+	}
+	#closeModal a{
+		color: #333;
+	}
+
+
 }
 
 
