@@ -60,13 +60,54 @@ body a:visited{
     color: inherit;
 }
 /* Basic initialize CSS at browser End*/
+@font-face {
+	font-family: 'AppleSDGothicNeoR';
+	src: url('AppleSDGothicNeoR.woff') format('woff')
+  }
+  @font-face {
+	font-family: 'AppleSDGothicNeoM';
+	src: url('AppleSDGothicNeoM.woff') format('woff')
+  }
+  @font-face {
+	font-family: 'AppleSDGothicNeoL';
+	src: url('AppleSDGothicNeoL.woff') format('woff')
+  }
 
-
+* {
+	font-family: AppleSDGothicNeoR;
+}
 @media screen and (max-width: 450px){
+	*{
+		font-size: 12px;
+	}
+	
+	body{
+		display: flex;
+  		flex-direction: column;
+	}
+	.contents{
+		flex: 1 0 auto;
+	}
+	.sticky-btn-container{
+		flex-shrink: 0;
+	}
+	
+
+	.members{
+		margin: 3em auto;
+	}
+	.member-card, .price-container, .member-tags, .price-container{
+		display: flex;
+	}
 	.member-card{
 		width:100%;
-		display : flex;
 		align-items: stretch;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+		transition: 0.4s;
+		margin: 1.3em 0;
+	}
+	.member-card:hover{
+		box-shadow: 0 16px 32px 0 rgba(0,0,0,0.3);
 	}
 	.member-img{
 		flex-grow: 1;
@@ -79,10 +120,22 @@ body a:visited{
 	.member-info{
 		flex-grow: 8;
 	}
+	.member-tags{
+		justify-content: space-between;
+	}
+	.member-tags > div{
+		background: #cecece;
+		padding: 0.2em 0.5em;
+		margin: 0.3em;
+		border-radius: 3em;
+	}
 	.member-submit-btn{
 		flex-grow:1;
 	}
-}
 
+	.member-add-btn-container, .make-link{
+		text-align: center;
+	}
+}
 
 
