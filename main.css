@@ -80,7 +80,9 @@ body a:visited{
 	*{
 		font-size: 12px;
 	}
-	
+	html, body{
+		height: 100%;
+	}
 	body{
 		display: flex;
   		flex-direction: column;
@@ -88,7 +90,7 @@ body a:visited{
 	.contents{
 		flex: 1 0 auto;
 	}
-	.sticky-btn-container{
+	.sticky-container{
 		flex-shrink: 0;
 	}
 	
@@ -110,7 +112,7 @@ body a:visited{
 		box-shadow: 0 16px 32px 0 rgba(0,0,0,0.3);
 	}
 	.member-img{
-		flex-grow: 1;
+		flex-grow: 2;
 		text-align: center;
 	}
 	.member-img > svg{
@@ -118,7 +120,7 @@ body a:visited{
 		height: 3em;
 	}
 	.member-info{
-		flex-grow: 8;
+		flex-grow: 7;
 	}
 	.member-tags{
 		justify-content: space-between;
@@ -135,6 +137,10 @@ body a:visited{
 
 	.member-add-btn-container, .make-link{
 		text-align: center;
+	}
+
+	.price-total{
+		text-align: right;
 	}
 }
 
