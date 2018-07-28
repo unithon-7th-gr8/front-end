@@ -242,5 +242,9 @@ body a:visited{
 		font-size: 7px;
 		color: #333;
 		letter-spacing: -0.5px;
-	}
+    }
+    
+    .member-btn.flex-row-center.active{
+        background: #ccc;
+    }
 }

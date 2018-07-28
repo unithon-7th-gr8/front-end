@@ -19,17 +19,31 @@
             <input type="text" value="http://www.naver.com/" id="myInput">
             <a class="link-btn" onclick="copyLink()">초대링크 복사</a>
         </div>
-        <div class="container members">
+        <div class="members">
             <div class="member-card">
                 <img src="/Users/soonhojang/Documents/myProject/front-end/icon1.svg" width="42px" height="42px">
                 <div class="member-info">
-                    <div class="member-name"><input type="text" placeholder="이름"></div>
+                    <div class="member-name"><input type="text" placeholder="이름" class="inputName"></div>
                     <div class="member-tags">
-                        <div>안마심</div>
-                        <div>안먹음</div>
-                        <div>늦게옴</div>
-                        <div>일찍감</div>
-                        <div>면제</div>
+                        <a class="member-tag">안마심</a>
+                        <a class="member-tag">안먹음</a>
+                        <a class="member-tag">늦게옴</a>
+                        <a class="member-tag">일찍감</a>
+                        <a class="member-tag">면제</a>
+                    </div>
+                </div>
+                <div class="member-submit-btn"><img src="/Users/soonhojang/Documents/myProject/front-end/cross-out.svg" class="cross-out-img"></div>
+            </div>
+            <div class="member-card">
+                <img src="/Users/soonhojang/Documents/myProject/front-end/icon1.svg" width="42px" height="42px">
+                <div class="member-info">
+                    <div class="member-name"><input type="text" placeholder="이름" class="inputName"></div>
+                    <div class="member-tags">
+                        <a class="member-tag">안마심</a>
+                        <a class="member-tag">안먹음</a>
+                        <a class="member-tag">늦게옴</a>
+                        <a class="member-tag">일찍감</a>
+                        <a class="member-tag">면제</a>
                     </div>
                 </div>
                 <div class="member-submit-btn"><img src="/Users/soonhojang/Documents/myProject/front-end/cross-out.svg" class="cross-out-img"></div>
@@ -37,13 +51,13 @@
             <div class="member-card">
                 <img src="/Users/soonhojang/Documents/myProject/front-end/icon2.svg" width="42px" height="42px">
                 <div class="member-info">
-                    <div class="member-name"><input type="text" placeholder="이름"></div>
+                    <div class="member-name"><input type="text" placeholder="이름" class="inputName"></div>
                     <div class="member-tags">
-                        <div>안마심</div>
-                        <div>안먹음</div>
-                        <div>늦게옴</div>
-                        <div>일찍감</div>
-                        <div>면제</div>
+                        <a class="member-tag">안마심</a>
+                        <a class="member-tag">안먹음</a>
+                        <a class="member-tag">늦게옴</a>
+                        <a class="member-tag">일찍감</a>
+                        <a class="member-tag">면제</a>
                     </div>
                 </div>
                 <div class="member-submit-btn"><img src="/Users/soonhojang/Documents/myProject/front-end/cross-out.svg" class="cross-out-img"></div>
@@ -51,13 +65,13 @@
             <div class="member-card">
                     <img src="/Users/soonhojang/Documents/myProject/front-end/icon3.svg" width="42px" height="42px">
                     <div class="member-info">
-                        <div class="member-name"><input type="text" placeholder="이름"></div>
+                        <div class="member-name"><input type="text" placeholder="이름" class="inputName"></div>
                         <div class="member-tags">
-                            <div>안마심</div>
-                            <div>안먹음</div>
-                            <div>늦게옴</div>
-                            <div>일찍감</div>
-                            <div>면제</div>
+                            <a class="member-tag">안마심</a>
+                            <a class="member-tag">안먹음</a>
+                            <a class="member-tag">늦게옴</a>
+                            <a class="member-tag">일찍감</a>
+                            <a class="member-tag">면제</a>
                         </div>
                     </div>
                     <div class="member-submit-btn"><img src="/Users/soonhojang/Documents/myProject/front-end/cross-out.svg" class="cross-out-img"></div>
@@ -69,16 +83,22 @@
                     <div class="price-cont-1">
                         <div class="price-cont-1-1">
                             <p>술 값</p>
-                            <p>116,900원</p>
+                            <div class="con-price">
+                                <div><input type="text" class="inputPrice"></div>원
+                            </div>
                         </div>
                         <div class="price-cont-1-1">
                             <p>안주 값</p>
-                            <p>54,000원</p>
+                            <div class="con-price">
+                                <div><input type="text" class="inputPrice"></div>원
+                            </div>
                         </div>
                     </div>
                     <div class="price-cont-2">
                         <p>합계</p>
-                        <p>170,900원</p>
+                        <div class="con-price">
+                            <div><input type="text" class="inputPrice"></div>원
+                        </div>
                     </div>
                 </div>
                 <div class="price-cont-s">
@@ -89,15 +109,7 @@
             <div class="bill-contents">
                 <div class="plus-circle flex-row-center"><img src="/Users/soonhojang/Documents/myProject/front-end/add-white.svg" class="add-img-2"></div>
                 <div class="bill-req">영수증을 첨부하세요</div>
-                <form id="form1" enctype="multipart/form-data" method="post" action="Upload.aspx">
-                    <div>
-                        <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*">
-                    </div>
-                    <div>
-                        <input type="button" onclick="uploadFile()" value="업로드" />
-                    </div>
-                    <div id="progress"></div>
-                </form>
+            
             </div>
             <div class="vertical-line"></div>
         </div>
@@ -116,7 +128,7 @@
                 </div>
             </div>
             <div class="modal-btn-groups flex-row-center">
-                <div class="modal-btn-group flex-column-center" id="toPage"><a class="move-page" href="http://www.naver.com">페이지로 이동</a></div>
+                <div class="modal-btn-group flex-column-center" id="toPage"><a class="move-page" href="payment.html">페이지로 이동</a></div>
                 <div class="modal-btn-group flex-column-center" id="closeModal"><a class="close-modal" href="#">닫기</a></div>
             </div>
         </div>             
@@ -126,3 +138,4 @@
     </footer>
 </body>
 </html>
+

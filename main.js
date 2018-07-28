@@ -74,3 +74,38 @@ function uploadCanceled(evt) {
     alert("인터넷 연결이 끊겼거나, 유저가 연결을 취소하였습니다.");
 }
 
+
+$(document).ready(function () {
+    clickedBtn();
+});
+
+function clickedBtn() {
+    $('.member-tag').click(function(){
+        $(this).addClass('active');
+    });
+    $('.member-tag.active').click(function(){
+        $(this).removeClass('active');
+    });
+}
+
+$(document).ready(function(){
+    $(".inputName").keypress(function (e) {
+     if (e.which == 13){
+        var name = $(this).val()
+        $(this).addClass('hidden');
+        var parent = $(this).parent()
+        parent.text(name)
+     }
+    });
+});
+
+
+$(document).ready(function(){
+    $(".inputPrice").keypress(function (e) {
+     if (e.which == 13){
+        var name = $(this).val()
+        $(this).addClass('hidden');
+        $(this).parent().text(name)
+     }
+    });
+});
